@@ -69,11 +69,4 @@ public class Analyse {
         return true;
     }
 
-    // public static void analyseCommand(String command, Socket socket) {
-    //     try {
-    //         Parser.parseCommand(command,socket);
-    //     } catch (Exception e) {
-    //         TextAreaUtil.customContext(e.getMessage());
-    //     }
-    // }
 }

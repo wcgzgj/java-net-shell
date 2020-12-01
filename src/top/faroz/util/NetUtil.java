@@ -78,18 +78,27 @@ public class NetUtil {
                 if (split.length!=3) return;//put指令一定要是有三个数据
                 String localPath = split[1];
 
+
+                /**
+                 * 因为socket已经写出过一次了
+                 * 且服务端也已经传回来过信息 （完成了三次握手）
+                 *
+                 * 所以，要传输文件，只能再新建一个socket
+                 */
                 //本地文件写出
+                Socket put_socket = getSocket();
+                OutputStream put_ops = put_socket.getOutputStream();
                 File file = new File(localPath);
                 FileInputStream fis = new FileInputStream(file);
                 int len;
                 byte[] b = new byte[1024];
                 while ((len=fis.read(b))!=-1) {
-                    ops.write(b,0,len);
+                    put_ops.write(b,0,len);
                 }
-                socket.shutdownOutput();
+                put_socket.shutdownOutput();
 
                 //接受服务端信息
-                InputStream ips = socket.getInputStream();
+                InputStream ips = put_socket.getInputStream();
                 BufferedReader br = new BufferedReader(new InputStreamReader(ips));
                 String info = br.readLine();
                 TextAreaUtil.appendText(info);
