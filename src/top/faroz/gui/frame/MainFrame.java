@@ -21,7 +21,7 @@ public class MainFrame extends JFrame {
 
     public MainFrame() throws HeadlessException {
         JTextArea taDown = MainPanel.getInstance().getTaDown();
-        this.setTitle("MyLisp 解释器");
+        this.setTitle("19180319张健 指令网络工具");
         this.setLayout(new BorderLayout());
         this.setBounds(new Rectangle(200,200,500,500));
 

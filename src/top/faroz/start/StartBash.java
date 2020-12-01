@@ -16,7 +16,7 @@ public class StartBash {
     static {
         JTextArea taUp = MainPanel.getInstance().getTaUp();
         taUp.append("   Hello ， 欢迎使用 FARO_Z 下载器" +
-                "\n   使用前，请务必提前运行Service" +
+                "\n   使用前，请务必提前开启Server类" +
                 "\n   选择下方窗口,以输入指令\n\n\n");
     }
     public static void main(String[] args) {

@@ -1,0 +1,20 @@
+
+
+dir命令：
+    服务器返回指定目录下的文件列表
+    输入格式如下：
+    dir [path]
+
+get命令：
+    下载对应路径上的文件
+    输入格式如下：
+    get [path]
+    下载的文件自动存放在 src/download 路径下
+
+put命令：
+    将本地路径上的文件，传输到服务器上
+    输入格式如下：
+    put [localPath] [remotePath]
+
+quie命令：
+    结束程序

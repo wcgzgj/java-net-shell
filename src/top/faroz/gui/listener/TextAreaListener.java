@@ -3,6 +3,7 @@ package top.faroz.gui.listener;
 import top.faroz.exception.StackEmptyException;
 import top.faroz.gui.panel.MainPanel;
 import top.faroz.model.DataCache;
+import top.faroz.service.Analyse;
 
 import javax.swing.*;
 import java.awt.event.KeyEvent;
@@ -49,12 +50,7 @@ public class TextAreaListener implements KeyListener {
                 //并对用户的输入做出相应
 
 
-
-
-                // Analyse.analyseInstruction(text);
-
-
-
+                Analyse.analyseInstruction(text);
 
 
                 //每次输入完后，taUp的光标置于最底下
